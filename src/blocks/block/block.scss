@@ -1,0 +1,278 @@
+.block {
+  box-shadow: 0 3px 9px rgba(24, 117, 209, 0.11);
+  background-color: #ffffff;
+
+  @include res(md) {
+    border-radius: $border-radius;
+  }
+
+  &-header {
+    padding: 20px 15px;
+    border-bottom: 1px solid $border-color;
+
+    @include res(md) {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      padding: 0 30px;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    align-self: stretch;
+    margin: 15px -20px -15px;
+    border-top: 1px solid $border-color;
+
+    @include res(md) {
+      margin: 0 -30px 0 0;
+    }
+  }
+
+  &-btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-left: 1px solid $border-color;
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    .icon:first-child {
+      margin-right: 10px;
+    }
+
+    @include res(md) {
+      width: auto;
+      padding: 0 30px;
+
+      &:first-child {
+        border-left: 1px solid $border-color;
+      }
+    }
+  }
+
+  &-title-wrap {
+    @include res(md) {
+      display: flex;
+      flex: 1;
+      align-items: baseline;
+    }
+  }
+
+  &-title {
+    font-size: 24px;
+    align-self: baseline;
+    margin: 0;
+
+    @include res(md) {
+      font-size: 24px;
+    }
+  }
+
+  &-subtitle {
+    font-size: 16px;
+    align-self: baseline;
+    margin-top: 2px;
+
+    @include res(md) {
+      margin-left: 8px;
+      margin-top: auto;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 1px;
+        margin-right: 8px;
+        background-color: currentColor;
+      }
+    }
+  }
+
+  &-content {
+    padding: 20px 15px;
+
+    @include res(md) {
+      padding: 30px;
+    }
+
+    &.d-flex {
+      display: flex;
+      flex-direction: column;
+
+      @include res(md) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  .payment-cards {
+    @include res(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .payment-card {
+      align-items: stretch;
+
+      @include res(md) {
+        flex: 1;
+      }
+
+      @include res(lg) {
+        flex: 2;
+
+        &.total {
+          flex: 5;
+        }
+      }
+    }
+
+    .icon-circle {
+      margin: 10px auto;
+      align-self: center;
+
+      @include res(md) {
+        margin: 0 8px;
+      }
+    }
+
+    .payment-card-equal {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      align-self: center;
+
+      @include res(lg) {
+        width: auto;
+        margin: 0 10px;
+      }
+
+      .icon-circle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .commission-cards-wrap {
+    position: relative;
+
+    .commission-cards__bullets {
+      display: flex;
+      position: absolute;
+      top: -15px;
+      right: -8px;
+
+      .bullet {
+        width: 7px;
+        height: 7px;
+        margin-right: 8px;
+        background-color: #ecf0f2;
+        border-radius: 50%;
+
+        &.filled {
+          background-color: #0f92f5;
+        }
+      }
+    }
+  }
+
+  .commission-cards {
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1022px;
+    max-height: 350px;
+    overflow-y: scroll;
+
+    .commission-card {
+      align-items: stretch;
+      flex-basis: 249px;
+
+      @include res(md) {
+        flex-basis: 249px;
+      }
+
+      @include res(lg) {
+        flex-basis: 249px;
+
+        &.total {
+          flex: 5;
+        }
+      }
+    }
+
+    .icon-circle {
+      margin: 10px auto;
+      align-self: center;
+
+      @include res(md) {
+        margin: 0 8px;
+      }
+    }
+
+    .commission-card-equal {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      align-self: center;
+
+      @include res(lg) {
+        width: auto;
+        margin: 0 10px;
+      }
+
+      .icon-circle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      background-color: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 5px;
+      height: 84px;
+      border: none;
+      border-radius: 3px;
+      background-color: #e3e9ec;
+    }
+  }
+
+  .commission-total {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 240px;
+    margin-left: auto;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px;
+    }
+  }
+
+  #commission-total {
+    max-width: 80%;
+  }
+}

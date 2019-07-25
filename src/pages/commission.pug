@@ -1,0 +1,164 @@
+extends ../pug/layout.pug
+
+block meta
+  title Commision
+  meta(name='description', content='')
+
+block content
+  +navbar
+  .page-content
+    +side-menu
+    .main
+      .container-fluid
+        .block
+          .block-header
+            .block-title-wrap
+              h2.block-title Commission
+              .block-subtitle March 2019
+            .block-buttons
+              a.block-btn(href='#')
+                +icon('upload')
+                | Export
+              a.block-btn(href='#')
+                +icon('print')
+                | Print
+          .block-content.d-flex
+            .commission-cards-wrap
+              .commission-cards__bullets
+                .bullet.filled
+                .bullet
+              .commission-cards
+                .commission-card
+                  .heading Name Comes Here
+                  .number $600
+                  .desc Lorem Ipsum Dolor Sit
+                .commission-card
+                  .heading Highest Tire Achieved
+                  .number 7%
+                    .date-points
+                      .date 03/05
+                      .points
+                        .point.filled
+                        .point.filled
+                        .point.filled
+                        .point
+                        .point
+                  .desc Lorem Ipsum
+                .commission-card
+                  .heading Paid By
+                  .number $31,940
+                  .desc % of Issued Premium
+                .commission-card
+                  .heading Tier Level
+                  .list
+                    .item 
+                      |13
+                      span.desc Written Items
+                    .item 
+                      |5
+                      span.desc Kept Appointments
+                    .item 
+                      |7
+                      span.desc Written Items
+                .commission-card
+                  .heading Paid By
+                  .number $1,330
+                  .desc Lorem Ipsum Dolor Sit
+                .commission-card
+                  .heading Highest Tire Achieved
+                  .number 7%
+                    .date-points
+                      .date 03/05
+                      .points
+                        .point.filled
+                        .point.filled
+                        .point.filled
+                        .point
+                        .point
+                  .desc Lorem Ipsum Dolor Sit
+                .commission-card
+                  .heading Paid By
+                  .number $31,940
+                  .desc % of Issued Premium
+                .commission-card
+                  .heading Tier Level
+                  .number 5
+                  .desc Kept Appointments
+                .commission-card
+                  .heading Name Comes Here
+                  .number $600
+                  .desc Lorem Ipsum Dolor Sit
+                .commission-card
+                  .heading Highest Tire Achieved
+                  .number 7%
+                    .date-points
+                      .date 03/05
+                      .points
+                        .point.filled
+                        .point.filled
+                        .point.filled
+                        .point
+                        .point
+                  .desc Lorem Ipsum
+                .commission-card
+                  .heading Paid By
+                  .number $31,940
+                  .desc % of Issued Premium
+                .commission-card
+                  .heading Tier Level
+                  .list
+                    .item 
+                      |13
+                      span.desc Written Items
+                    .item 
+                      |5
+                      span.desc Kept Appointments
+                    .item 
+                      |7
+                      span.desc Written Items
+                .commission-card
+                  .heading Paid By
+                  .number $1,330
+                  .desc Lorem Ipsum Dolor Sit
+                .commission-card
+                  .heading Highest Tire Achieved
+                  .number 7%
+                    .date-points
+                      .date 03/05
+                      .points
+                        .point.filled
+                        .point.filled
+                        .point.filled
+                        .point
+                        .point
+                  .desc Lorem Ipsum Dolor Sit
+                .commission-card
+                  .heading Paid By
+                  .number $31,940
+                  .desc % of Issued Premium
+                .commission-card
+                  .heading Tier Level
+                  .number 5
+                  .desc Kept Appointments
+            .commission-total
+              .heading Total Commission
+              .number $1,940
+        .block
+          .block-header
+            .block-title-wrap
+              h2.block-title 2019
+              .block-subtitle Commission Over Time
+          .block-content
+            .comp
+              .chart#commission-total
+                .chart-line-left
+                .chart-line-bottom
+                .chart-stroke
+              .commission-total
+                .heading Trednig for
+                .number $53,680
+  +page-footer
+
+
+
+

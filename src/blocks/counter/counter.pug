@@ -1,0 +1,7 @@
+mixin counter(name)
+  +b.counter
+    +e.BUTTON.btn--dec(type='button')
+      +icon('minus-thin')
+    +e.INPUT.input(value=1 name=name)
+    +e.BUTTON.btn--inc(type='button')
+      +icon('plus-thin')

@@ -1,0 +1,41 @@
+.toggle {
+
+  &__input {
+    display: none;
+  }
+
+  &__box {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 22px;
+    border-radius: 50px;
+    background-color: #bdc1c7;
+    cursor: pointer;
+    transition: background-color 0.15s;
+
+    .toggle__input:checked ~ & {
+      background-color: $color-main;
+    }
+
+    .timeline__item--danger .toggle__input:checked ~ & {
+      background-color: $color-danger;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: transform 0.15s;
+
+      .toggle__input:checked ~ & {
+        transform: translateX(18px);
+      }
+    }
+  }
+}

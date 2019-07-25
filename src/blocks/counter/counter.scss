@@ -1,0 +1,32 @@
+.counter {
+  @extend %form-control;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  max-width: 105px;
+
+  &__input {
+    appearance: none;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-main;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    outline: none;
+  }
+
+  &__btn {
+    border: 0;
+    padding: 5px;
+    background-color: transparent;
+    color: #474747;
+    outline: none;
+    cursor: pointer;
+  }
+}

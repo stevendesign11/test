@@ -1,0 +1,45 @@
+mixin navbar()
+  nav.navbar.navbar-fixed-top&attributes(attributes)
+    .container
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#nav')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      .navbar-collapse.collapse#nav
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Dashboard
+          li
+            a(href='#') Life & Health
+          li
+            a(href='#') Life & Health
+          li
+            a(href='#') Activities
+          li
+            a(href='#') Customers
+          li.dropdown
+            a.dropdown-toggle(href='#' data-toggle='dropdown') Reports
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Submenu #1
+              li
+                a(href='#') Submenu #2
+          li.dropdown
+            a.dropdown-toggle(href='#' data-toggle='dropdown') My agency
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Submenu #1
+              li
+                a(href='#') Submenu #2
+          li.dropdown
+            a.dropdown-toggle(href='#' data-toggle='dropdown') Help
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='#') Submenu #1
+              li
+                a(href='#') Submenu #2
+      a.navbar-user(href='#') LN

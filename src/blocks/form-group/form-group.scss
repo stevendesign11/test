@@ -1,0 +1,75 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .modal & {
+    margin-bottom: 0;
+  }
+
+  &__label {
+    display: block;
+    align-self: flex-start;
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+    color: #959595;
+    margin: -7px 15px -8px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: -5px;
+      bottom: 50%;
+      left: -5px;
+      background-color: #fff;
+    }
+
+    &:after {
+      top: calc(50% - 1px);
+      bottom: 0;
+      background-color: #f6f8f9;
+    }
+  }
+
+  &__placeholder {
+    color: #959595;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: transform 0.15s, font-size 0.15s;
+    pointer-events: none;
+
+    .form-group .input:focus ~ & {
+      font-size: 10px;
+      transform: translateY(-29.5px);
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: -5px;
+      bottom: 50%;
+      left: -5px;
+      transition: background-color;
+    }
+
+    .form-group .input:focus ~ &:before {
+      background-color: #fff;
+      transition-delay: 0.15s;
+    }
+
+    &:after {
+      top: calc(50% - 1px);
+      bottom: 0;
+      background-color: #f6f8f9;
+    }
+  }
+}

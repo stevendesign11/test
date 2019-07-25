@@ -1,0 +1,128 @@
+.navbar {
+  background-color: $color-main;
+  border: 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &-nav {
+    margin: 0;
+
+    li  {
+      a {
+        color: #fff;
+        font-size: 16px;
+        padding: 15px 15px 15px 65px !important;
+        border-top: 1px solid rgba(#fff, 0.5);
+
+        @include res(md) {
+          padding: 20px 8px !important;
+          font-size: 14px;
+          border-top: 0;
+        }
+
+        @include res(lg) {
+          padding-top: 28px !important;
+          padding-bottom: 28px !important;
+          font-size: 16px;
+        }
+
+        &:hover,
+        &:focus {
+          background-color: darken($color-main, 10%) !important;
+        }
+      }
+
+      &.open a {
+        background-color: darken($color-main, 10%);
+      }
+
+      &.active a {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .caret {
+    margin-left: 6px;
+  }
+
+  .dropdown-menu {
+    padding: 0;
+
+    @include res(md) {
+      padding: 5px 0;
+    }
+
+    li {
+      a {
+        font-size: 14px;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        background-color: #fff;
+        color: $text-color;
+
+        &:hover,
+        &:focus {
+          background-color: #eee !important;
+        }
+      }
+    }
+  }
+
+  &-toggle {
+    order: 1;
+    margin-right: 0;
+    border: 1px solid #fff;
+    margin-left: 10px;
+
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+
+  &-collapse {
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: initial !important;
+    background-color: $color-main;
+    margin: 0 !important;
+    border-top: 0 !important;
+    padding: 0;
+    overflow: auto;
+
+    @include res(md) {
+      position: static;
+    }
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    border: 2px solid #ffffff;
+    background-color: #4e7785;
+    margin-left: 10px;
+
+    @include res(lg) {
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

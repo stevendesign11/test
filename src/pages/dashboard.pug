@@ -1,0 +1,72 @@
+extends ../pug/layout.pug
+
+block meta
+  title Dashboard
+  meta(name='description', content='')
+
+block content
+  +navbar
+  .page-content
+    +side-menu
+    .main
+      .container-fluid
+        .block
+          .block-header
+            .block-title-wrap
+              h2.block-title Compensation
+              .block-subtitle March 2019
+            .block-buttons
+              a.block-btn(href='#')
+                +icon('upload')
+                | Export
+              a.block-btn(href='#')
+                +icon('print')
+                | Print
+          .block-content
+            .payment-cards
+              .payment-card.base
+                .number $1,800
+                .desc Base Pay
+              .icon-circle
+                +icon('plus')
+              .payment-card.commission
+                .number $1,940
+                .desc Commission
+              .icon-circle
+                +icon('plus')
+              .payment-card.bonus
+                .number $600
+                .desc Bonus
+              .payment-card-equal
+                .icon-circle
+                  +icon('equal')
+              .payment-card.total
+                .payment-card-header
+                  h3 Total Compensation
+                  .number $4,680
+                .progress
+                  .progress-bar.base(style='width: 35%')
+                  .progress-bar.commission(style='width: 45%')
+                  .progress-bar.bonus(style='width: 20%')
+
+        .block
+          .block-header
+            .block-title-wrap
+              h2.block-title 2019
+              .block-subtitle Total Comp Over Time
+          .block-content
+            .comp
+              .chart#comp-total
+              .payment-card
+                .payment-card-header
+                  h3 Trending for
+                  .number $53,860
+                .progress.vertical
+                  .progress-bar.bonus(style='height: 20%')
+                  .progress-bar.commission(style='height: 45%')
+                  .progress-bar.base(style='height: 35%')
+  +page-footer
+
+
+
+

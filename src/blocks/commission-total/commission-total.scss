@@ -1,0 +1,18 @@
+.commission-total {
+  padding: 0 56px;
+  background-color: #f7f9fa;
+  border-radius: 4px;
+  text-align: center;
+
+  .heading {
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-dark;
+  }
+
+  .number {
+    font-size: 40px;
+    font-weight: 400;
+    color: $color-main;
+  }
+}

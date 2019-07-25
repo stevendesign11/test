@@ -1,0 +1,155 @@
+.commission-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 249px;
+  margin-right: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #f7f9fa;
+  color: $color-main;
+  padding: 25px 35px;
+  border-radius: $border-radius;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+
+  .comp & {
+    padding: 15px;
+
+    @include res(md) {
+      padding: 30px;
+    }
+  }
+
+  &.total {
+    padding: 15px;
+  }
+
+  &.base:before,
+  &.bonus:before,
+  &.commission:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    width: 8px;
+    background-color: $color-main;
+    border-radius: 3px;
+  }
+
+  &.bonus:before {
+    background-color: $color-success;
+  }
+
+  &.base:before {
+    background-color: $color-main-dark;
+  }
+
+  &-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .comp & {
+      display: block;
+    }
+
+    h3 {
+      margin: 0 15px 0 0;
+      font-size: 18px;
+      font-weight: 300;
+
+      .comp & {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .progress {
+    margin-top: 16px;
+    margin-bottom: 0;
+
+    &.vertical {
+      height: 270px;
+    }
+  }
+
+  .heading {
+    color: $color-dark;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .number {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 300;
+    color: $color-main;
+
+    .date-points {
+      display: flex;
+      margin: auto 0 auto 22px;
+      flex-direction: column;
+    }
+
+    .date {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .points {
+      display: flex;
+
+      .point {
+        width: 9px;
+        height: 9px;
+        margin-right: 10px;
+        background-color: #e3e9ec;
+        border-radius: 50%;
+
+        &.filled {
+          background-color: $color-main;
+        }
+      }
+    }
+  }
+
+  .list {
+    .item {
+      margin: 5px 0;
+
+      .desc {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 13px;
+    color: $text-color;
+  }
+
+  &:hover {
+    background-color: $color-main;
+
+    div,
+    span {
+      color: $white;
+    }
+
+    .points {
+      .point {
+        background-color: #76c5ff;
+
+        &.filled {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

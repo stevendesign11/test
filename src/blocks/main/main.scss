@@ -1,0 +1,26 @@
+.main {
+  padding: 15px 0 15px 56px;
+  overflow-x: hidden;
+  transition: padding-left 0.3s;
+
+  .block + .block {
+    margin-top: 20px;
+  }
+
+  .side-visible & {
+
+    @include res(xl) {
+      padding-left: 255px;
+    }
+  }
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include res(md) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

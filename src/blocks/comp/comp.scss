@@ -1,0 +1,27 @@
+.comp {
+
+  @include res(md) {
+    display: flex;
+  }
+
+  .payment-card {
+    max-width: 100%;
+    height: auto;
+
+    @include res(md) {
+      max-width: 200px;
+    }
+
+    @include res(lg) {
+      max-width: 240px;
+    }
+  }
+
+  .chart {
+    width: 100%;
+
+    @include res(md) {
+      margin-right: 30px;
+    }
+  }
+}

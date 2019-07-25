@@ -1,0 +1,84 @@
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: #f7f9fa;
+  padding: 30px 15px 30px 30px;
+  border-radius: $border-radius;
+
+  .comp & {
+    padding: 15px;
+
+    @include res(md) {
+      padding: 30px;
+    }
+  }
+
+  &.total {
+    padding: 15px;
+  }
+
+  &.base:before,
+  &.bonus:before,
+  &.commission:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    width: 8px;
+    background-color: $color-main;
+    border-radius: 3px;
+  }
+
+  &.bonus:before {
+    background-color: $color-success;
+  }
+
+  &.base:before {
+    background-color: $color-main-dark;
+  }
+
+  &-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .comp & {
+      display: block;
+    }
+
+    h3 {
+      margin: 0 15px 0 0;
+      font-size: 18px;
+      font-weight: 300;
+
+      .comp & {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .progress {
+    margin-top: 16px;
+    margin-bottom: 0;
+
+    &.vertical {
+      height: 270px;
+    }
+  }
+
+
+  .number {
+    font-size: 34px;
+    font-weight: 300;
+    color: $color-dark;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+}

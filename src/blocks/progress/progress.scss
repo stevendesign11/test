@@ -1,0 +1,26 @@
+.progress {
+
+  &-bar {
+
+    &.base {
+      background-color: $color-main-dark;
+    }
+
+    &.commission {
+      background-color: $color-main;
+    }
+
+    &.bonus {
+      background-color: $color-success;
+    }
+
+    .progress.vertical & {
+      width: 100%;
+    }
+  }
+
+  &.vertical {
+    display: flex;
+    flex-direction: column;
+  }
+}

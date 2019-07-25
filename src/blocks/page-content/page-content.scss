@@ -1,0 +1,43 @@
+.page-content {
+
+  &-header {
+    background-color: #fff;
+
+    .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      @include res(md) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    h2 {
+      flex: 1;
+      margin: 0 0 12px;
+      font-size: 24px;
+      font-weight: 400;
+
+      @include res(md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    flex: 1;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+
+    @include res_less(md) {
+      margin-bottom: 12px;
+    }
+  }
+}

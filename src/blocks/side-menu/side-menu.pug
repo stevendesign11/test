@@ -1,0 +1,105 @@
+mixin side-menu()
+  .side-menu
+    .side-menu-header
+      .side-menu-logo Agency#[span zoom]
+      button.side-menu-toggle(type='button')
+        +icon('side-menu')
+    ul
+      li.dropdown
+        button(type='button' data-toggle='dropdown').dropdown-toggle.add
+          span +
+          | add to the platform
+        .dropdown-menu
+          h2 Add to page
+          h3 New business
+          .btn.btn--main
+            +icon('upload')
+            | Upload Binding Docs
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          h3 leads
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          h3 Life and health
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          h3 Activities
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          .btn
+            +icon('plus')
+            | Add Broker Business
+
+      li.dropdown
+        button(type='button' data-toggle='dropdown').dropdown-toggle
+          span
+            +icon('clock')
+          | AgencyHR
+        .dropdown-menu
+          h2 Add to page
+          h3 New business
+          .btn.btn--main
+            +icon('upload')
+            | Upload Binding Docs
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          h3 leads
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          h3 Life and health
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          h3 Activities
+          .btn
+            +icon('plus')
+            | Add Broker Business
+          .btn
+            +icon('plus')
+            | Add Broker Business
+      li
+        a(href='#')
+          span
+            +icon('up')
+          | Leads
+      li
+        a(href='#')
+          span
+            +icon('back')
+          | Winbacks
+      li
+        a(href='#')
+          span
+            +icon('star')
+          | Commission
+          .badge $50.00
+      li
+        a(href='#')
+          span
+            +icon('calendar')
+          | Daily tasks
+          .badge 25

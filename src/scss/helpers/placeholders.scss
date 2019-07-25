@@ -1,0 +1,18 @@
+%form-control {
+  display: block;
+  width: 100%;
+  height: 46px;
+  border: 1px solid #e9eaea;
+  border-radius: 4px;
+  background-color: #f6f8f9;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: none;
+  color: #4a4a4a;
+}
+
+%clear-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

@@ -1,0 +1,134 @@
+extends ../pug/layout.pug
+
+block meta
+  title Главная
+  meta(name='description', content='')
+
+block content
+  +navbar.page-header
+  +b.page-content
+    +e.header
+      +e.inner
+        +e.H2.title Onboarding Process
+        +b.btn--main.__btn.js-show-modal(href='#timeline-create') add Touchpoint
+    +e.content
+      +e.inner
+        +b.timeline
+          +e.item--start
+            +e.label Start
+            +e.icon
+              +icon('flag')
+            +e.H3.title Customer Sold
+          +e.item
+            +e.label
+              +e.label-title day
+              +e.label-number 12
+            +e.icon
+              +icon('envelope')
+            +e.content
+              +e.text-wrap
+                +e.H3.title Touchpoint Card Title
+                +e.text Applies to: #[strong auto, home, condo, renters]
+              +toggle.__toggle
+              +e.BUTTON.actions
+                +icon('dots')
+          +e.item
+            +e.label
+              +e.label-title day
+              +e.label-number 16
+            +e.icon
+              +icon('envelope')
+            +e.content
+              +e.text-wrap
+                +e.H3.title Touchpoint Card Title
+                +e.text Applies to: #[strong auto]
+              +toggle.__toggle
+              +e.BUTTON.actions
+                +icon('dots')
+          +e.item
+            +e.label
+              +e.label-title day
+              +e.label-number 18
+            +e.icon
+              +icon('envelope')
+            +e.content
+              +e.text-wrap
+                +e.H3.title Touchpoint Card Title
+                +e.text Applies to: #[strong auto, home, condo]
+              +toggle.__toggle
+              +e.BUTTON.actions
+                +icon('dots')
+          +e.item
+            +e.label
+              +e.label-title day
+              +e.label-number 20
+            +e.icon
+              +icon('envelope')
+            +e.content
+              +e.text-wrap
+                +e.H3.title Touchpoint Card Title
+                +e.text Applies to: #[strong auto, home, condo, renters]
+              +toggle.__toggle
+              +e.BUTTON.actions
+                +icon('dots')
+          +e.item--empty
+            +e.H3.title Lorem Ipsum
+          +e.item--danger
+            +e.label
+              +e.label-title day
+              +e.label-number -5
+            +e.icon
+              +icon('envelope')
+            +e.content
+              +e.text-wrap
+                +e.H3.title Touchpoint Card Title
+                +e.text Applies to: #[strong auto, home, condo, renters]
+              +toggle.__toggle
+              +e.BUTTON.actions
+                +icon('dots')
+          +e.item--end.--danger
+            +e.label End
+            +e.icon
+              +icon('flag')
+            +e.H3.title First Renewal
+  +page-footer
+  +b.modal.timeline-modal#timeline-create
+    +e.container
+      +e.inner
+        +e.BUTTON.btn-close
+          +icon('cross')
+        +e.H2.title Create Touchpoint
+        +e.content
+        +b.FORM.timeline-modal__form
+          +e.form-row--first
+            +counter('day')
+            +b.form-group
+              +e.LABEL.label Measure by
+              +b.SELECT.select.__control(name='measure')
+                option Day
+                option Month
+            +b.form-group
+              +e.LABEL.label Period
+              +b.SELECT.select.__control(name='period')
+                option After customer sold date
+                option Another period
+            +b.form-group
+              +e.LABEL.label For
+              +b.SELECT.select.__control(name='for')
+                option All Policies
+                option Another option
+          +e.js
+            +e.form-row
+              +e.action--send
+                +e.action-icon
+                  +icon('envelope-circle')
+                +e.action-content
+                  +e.H3.action-title Send Email
+                  +e.action-text Set up emails to automatically send to your clients
+              +e.action--create
+                +e.action-icon
+                  +icon('todo-circle')
+                +e.action-content
+                  +e.H3.action-title Create a Todo
+                  +e.action-text Create ToDo so nothing is missed throughout the Onboarding Process
+
